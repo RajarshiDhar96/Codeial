@@ -1,0 +1,23 @@
+h1{
+    font-size: 2.8rem;
+    font-family: sans-serif;
+    color: gray;
+    
+}
+.sign-up-container{
+    height: 600px;
+    width: 500px;
+   
+    margin: 15px auto;
+    background-color: white;
+    text-align: center;
+    padding-top: 60px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+input{
+    margin: 10px;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+}

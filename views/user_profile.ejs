@@ -1,0 +1,37 @@
+ 
+ <%# comment=This link tag will be put in the style tag in layout.ejs %>
+ <%# It is getting the user from the res.redirect in the user controller %>
+ <link rel="stylesheet" href="/css/user_profile.css">
+
+ <img src="<%= user.avatar %>" alt="<%= user.name%>" width="100" >
+  
+
+        <h1 style="font-size:4.5rem; color:white">Codeial/ Profile page</h1>
+
+        
+
+        <% if(user.id==profile_user.id){%>
+              <!-- if user matches then show the form -->
+              <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
+                     <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
+                     <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required>
+                     <input type="file" name="avatar" placeholder="Profile Picture">
+                     <input type="submit" value="update">
+              </form>
+
+              <h1 style="color: white;"><%=locals.user %></h1>
+              
+
+              <h1 style="color: rgb(234, 238, 2);"><%= profile_user %></h1>
+
+       <%}else{%>
+
+              <!-- else only show the profile info -->
+              <h1 style="color: white;" > Into the else part</h1>
+              <p><%= profile_user.name %></p>
+              <p><%= profile_user.email %></p>
+
+
+       <%}%>
+     
+        

@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    background-color: rgb(200, 85, 28);
+    height: 50px;
+    align-items: center;
+    padding: 0px 20px;
+    
+    
+}
+
+a{
+    text-decoration: dotted;
+    color: white;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+}
+.auth-links{
+    a{
+        margin: 15px;
+        font-size: 1.3rem;
+        font-family:Andale Mono, monospace;
+    }
+}

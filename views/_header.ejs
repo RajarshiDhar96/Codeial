@@ -1,0 +1,34 @@
+
+<%# Partials %>
+<%# local.user and user are basically the same things %>
+<header>
+
+        <div class="mini-logo">
+            
+                <a href='/'>Codeial</a>
+             
+        </div>
+   
+        <div class="auth-links"> 
+            <!-- If the user is signed-in -->
+            <% if (locals.user) { %>
+        
+                <a href="/users/profile/<%= user._id%>"><%=user.name%></a>
+            
+            
+                <a href="/users/sign-out">Sign-Out</a>
+           <!-- If the User is not signed in  -->
+            <% } else {%>
+                
+                    <a href="/users/sign-in">Sign-In</a>
+                
+                
+                    <a href="/users/sign-up">Sign-Up</a>
+                
+            <% }%>
+
+
+        </div>
+        
+    
+</header>
